@@ -1,0 +1,6 @@
+<ul>
+    <li *ng-for="#column of board.columns">
+        <board-column [column]="column"></board-column>
+    </li>
+</ul>
+<button (click)="addColumn()">Add column</button>

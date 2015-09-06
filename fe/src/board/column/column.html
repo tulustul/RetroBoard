@@ -1,0 +1,12 @@
+<div class="column">
+    <div>
+        <h3>{{column.title}}</h3>
+        <span class="close-button" (click)="destroy()">x</span>
+    </div>
+    <ul>
+        <li *ng-for="#card of column.cards">
+            <card [card]="card"></card>
+        </li>
+    </ul>
+    <span class="add-button" (click)="addCard()">+</span>
+</div>

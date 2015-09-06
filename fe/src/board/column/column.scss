@@ -1,0 +1,13 @@
+@import '../../commonStyles';
+
+.column {
+    padding: 10px;
+    margin: 10px;
+    background-color: #EEE;
+    position: relative;
+    ul {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+    }
+}

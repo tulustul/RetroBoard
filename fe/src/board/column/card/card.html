@@ -1,0 +1,16 @@
+<div class="card">
+    <span class="close-button" (click)="destroy()">x</span>
+    <div class="content" *ng-if="!editing" (click)=edit()>
+        {{card.content}}
+    </div>
+    <input [value]="card.content"
+           type="text"
+           *ng-if="editing"
+           (blur)="submit($event)"
+           (keyup)="submitOnEnter($event)"
+        />
+    <div class="votes">
+        <span *ng-if="card.votes">+{{card.votes}}</span>
+        <span class="button" (click)="vote()">vote</span>
+    </div>
+</div>

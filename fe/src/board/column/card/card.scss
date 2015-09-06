@@ -1,0 +1,19 @@
+@import '../../../commonStyles';
+
+$card-size: 150px;
+.card {
+    display: flex;
+    flex-direction: column;
+    width: $card-size;
+    height: $card-size;
+    background-color: #DDD;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    .content {
+        flex-grow: 1;
+    }
+    .votes {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,21 @@
+.button {
+    color: #AAA;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    &:hover {
+        color: #555;
+    }
+}
+.close-button {
+    @extend .button;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+}
+.add-button {
+    @extend .button;
+    font-size: 20px;
+}
