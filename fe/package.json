@@ -15,12 +15,13 @@
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-typescript": "^2.8.0",
+    "gulp-sourcemaps": "^1.5.2",
     "serve-static": "^1.10.0",
     "gulp-sass": "*",
     "node-sass": "*"
   },
   "dependencies": {
     "angular2": "2.0.0-alpha.36",
-    "commonjs": "*"
+    "systemjs": "0.18.4"
   }
 }

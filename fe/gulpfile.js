@@ -21,16 +21,18 @@ gulp.task('clean', function (done) {
 
 gulp.task('js', function () {
     var typescript = require('gulp-typescript');
-    var concat = require('gulp-concat');
+    var sourcemaps = require('gulp-sourcemaps');
     return gulp.src([PATHS.src.js, PATHS.typings])
+        .pipe(sourcemaps.init())
         .pipe(typescript({
             noImplicitAny: true,
             module: 'system',
             target: 'ES5',
             emitDecoratorMetadata: true,
             experimentalDecorators: true,
-            sourceMaps: true
+            sourceMaps: true,
         })).js
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist'));
 });
 
