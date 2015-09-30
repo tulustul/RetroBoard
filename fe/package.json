@@ -17,11 +17,10 @@
     "gulp-typescript": "^2.8.0",
     "gulp-sourcemaps": "^1.5.2",
     "serve-static": "^1.10.0",
-    "gulp-sass": "*",
-    "node-sass": "*"
+    "gulp-sass": "*"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.36",
+    "angular2": "2.0.0-alpha.37",
     "systemjs": "0.18.4"
   }
 }

@@ -1,0 +1,9 @@
+<ul *ng-if="boards.length">
+    <li *ng-for="#board of boards">
+        <a [router-link]="['/board', {key: board.Key}]">
+            {{ board.Title }}
+        </a>
+    </li>
+</ul>
+
+<span *ng-if="!boards.length">No boards created yet!</span>

@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <base href="/">
     <meta charset="UTF-8">
-    <title>Angular2 playground</title>
+    <title>Retro Board</title>
 </head>
 
 <body>
-<board>Loading...</board>
+<retroboard>Loading...</retroboard>
 </body>
 
 <!-- ES6-related imports -->
@@ -18,10 +19,12 @@
     System.config({defaultJSExtensions: true});
 </script>
 <script src="lib/angular2.js"></script>
+<script src="lib/http.js"></script>
+<script src="lib/router.dev.js"></script>
 
 <script>
     //bootstrap the Angular2 application
-    System.import('board/board').catch(console.log.bind(console));
+    System.import('retroboard').catch(console.log.bind(console));
 </script>
 
 </html>

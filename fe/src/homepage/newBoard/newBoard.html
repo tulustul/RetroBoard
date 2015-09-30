@@ -1,0 +1,7 @@
+<form [ng-form-model]="newBoardForm">
+    <h3>Create new board</h3>
+    <label for="title">Title*</label>
+    <input name="title" type="text" ng-control="title" placeholder="Board title">
+    <span *ng-if="!newBoardForm.valid">Required</span>
+    <button (click)="createBoard()">Create new board</button>
+</form>

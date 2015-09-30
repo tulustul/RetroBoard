@@ -9,6 +9,8 @@ var PATHS = {
     lib: [
         'node_modules/angular2/node_modules/traceur/bin/traceur-runtime.js',
         'node_modules/angular2/bundles/angular2.js',
+        'node_modules/angular2/bundles/http.js',
+        'node_modules/angular2/bundles/router.dev.js',
         'node_modules/systemjs/dist/system-csp-production.js'
     ],
     typings: 'node_modules/angular2/bundles/typings/angular2/angular2.d.ts',
@@ -53,16 +55,16 @@ gulp.task('libs', function () {
 
 gulp.task('play', ['libs', 'html', 'css', 'js'], function () {
     var http = require('http');
-    var connect = require('connect');
-    var serveStatic = require('serve-static');
+    // var connect = require('connect');
+    // var serveStatic = require('serve-static');
 
-    var port = 9000, app;
+    // var port = 9000, app;
 
     gulp.watch(PATHS.src.html, ['html']);
     gulp.watch(PATHS.src.js, ['js']);
     gulp.watch(PATHS.src.css, ['css']);
 
-    app = connect().use(serveStatic(__dirname + '/dist'));  // serve everything that is static
-    http.createServer(app).listen(port);
+    // app = connect().use(serveStatic(__dirname + '/dist'));  // serve everything that is static
+    // http.createServer(app).listen(port);
 });
 
