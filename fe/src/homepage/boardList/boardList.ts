@@ -29,7 +29,7 @@ export class BoardList {
     constructor(http: Http) {
         this.http = http;
         this.boards = [];
-        http.get('boards')
+        http.get('/api/boards')
         .toRx()
         .map(res => res.json())
         .subscribe(boards => this.boards = boards);

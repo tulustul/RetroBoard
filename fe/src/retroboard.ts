@@ -15,8 +15,9 @@ import {Homepage} from 'homepage/homepage';
 import {Board} from 'board/board';
 
 @RouteConfig([
-    {path: '/', component: Homepage, as: 'home'},
-    {path: '/board/:key', component: Board, as: 'board'},
+    {path: '/app', component: Homepage, as: 'home'},
+    {path: '/app/board/:key', component: Board, as: 'board'},
+    {path: '/', redirectTo: '/app'},
 ])
 @Component({
     selector: 'retroboard'

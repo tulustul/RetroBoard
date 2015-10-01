@@ -47,7 +47,7 @@ export class NewBoard {
         }
         var title = this.newBoardForm.controls.title.value;
         this.loading = true;
-        this.http.post('boards', JSON.stringify({ title: title }))
+        this.http.post('/api/boards', JSON.stringify({ title: title }))
         .toRx()
         .map(res => res.json())
         .subscribe(board => {
