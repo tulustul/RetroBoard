@@ -10,6 +10,7 @@ var PATHS = {
         'node_modules/angular2/node_modules/traceur/bin/traceur-runtime.js',
         'node_modules/angular2/bundles/angular2.js',
         'node_modules/angular2/bundles/http.js',
+        'node_modules/angular2/bundles/forms.js',
         'node_modules/angular2/bundles/router.dev.js',
         'node_modules/systemjs/dist/system-csp-production.js'
     ],

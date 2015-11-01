@@ -7,6 +7,7 @@ import {
 
 import {Column} from 'board/column/column';
 import {BoardModel, CardModel} from 'board/boardModel';
+import {SocketService} from 'socket/socket';
 
 @Component({
     selector: 'card',
@@ -20,8 +21,10 @@ import {BoardModel, CardModel} from 'board/boardModel';
 export class Card {
     editing: boolean;
     card: CardModel;
-    constructor() {
+    socketService: SocketService;
+    constructor(socketService: SocketService) {
         this.editing = false;
+        this.socketService = socketService;
     }
     edit() {
         this.editing = true;
@@ -40,5 +43,6 @@ export class Card {
     }
     vote() {
         this.card.vote();
+        this.socketService.doSend('vote');
     }
 }

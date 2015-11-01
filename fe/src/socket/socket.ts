@@ -1,5 +1,5 @@
 export class SocketService {
-    wsUri: string = "ws://127.0.0.1:3000/socket";
+    wsUri: string = "ws://127.0.0.1:3000/ws";
     websocket: WebSocket;
 
     constructor() {
@@ -29,12 +29,12 @@ export class SocketService {
     }
 
     onMessage(evt) {
-        this.writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data + '</span>');
-        this.websocket.close();
+        this.writeToScreen('RESPONSE: ' + evt.data);
+        // this.websocket.close();
     }
 
     onError(evt) {
-        this.writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
+        this.writeToScreen('ERROR: ' + evt.data);
     }
 
     doSend(message) {

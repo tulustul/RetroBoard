@@ -19,7 +19,7 @@ import {
     ControlGroup,
     Control,
     Validators,
-} from 'angular2/forms';
+} from 'angular2/core';
 
 @Component({
     selector: 'newboard',
@@ -48,7 +48,6 @@ export class NewBoard {
         var title = this.newBoardForm.controls.title.value;
         this.loading = true;
         this.http.post('/api/boards', JSON.stringify({ title: title }))
-        .toRx()
         .map(res => res.json())
         .subscribe(board => {
             this.loading = false;

@@ -20,7 +20,7 @@
     "gulp-sass": "*"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.37",
+    "angular2": "2.0.0-alpha.45",
     "systemjs": "0.18.4"
   }
 }
